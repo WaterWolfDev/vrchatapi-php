@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ `whoami` != 'app' ]; then
+    exec su-exec app generate "$@"
+fi
+
+cd /var/app/www
+composer run generate

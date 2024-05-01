@@ -1,0 +1,7 @@
+services:
+  generator:
+    image: waterwolfdev/vrchatapi-php:development
+    build:
+      context: .
+    volumes:
+      - .:/var/app/www
